@@ -1,14 +1,3 @@
-body { /* couleur de fond et petite bande en plus pour la page complete*/
-	background-color: #ddd6bc;
-	font-family: Contenu, Helvetica, sans-serif;
-	padding-top: 10px;
-	padding-bottom: 50px;
-}
-
-span:before {
-	content: " ";
-}
-
 @font-face { /*police*/
     font-family: "Titre";
     src: url('Font_family/ColabMed.otf');/*Font-family libre de droit, trouver sur : https://www.fontsquirrel.com/fonts/Colaborate */
@@ -17,6 +6,40 @@ span:before {
 @font-face { /*police*/
     font-family: "Contenu";
     src: url('Font_family/ColabLig.otf');/*Meme Font-family mais plus fine*/
+}
+
+@keyframes bounceIn{
+ 0% {
+     opacity: 0;
+     -webkit-transform: scale(.3);
+ }
+ 50% {
+     opacity: 1;
+     -webkit-transform: scale(1.05);
+ }
+ 70%{
+   -webkit-transform: scale(.9);
+ }
+ 100% {
+   -webkit-transform: scale(1);
+ }
+}
+
+@keyframes bounceIn{
+ 0% {
+     opacity: 0;
+    transform: scale(.3);
+ }
+ 50% {
+     opacity: 1;
+     transform: scale(1.05);
+ }
+ 70%{
+  transform: scale(.9);
+ }
+ 100% {
+  transform: scale(1);
+ }
 }
 
 .titre {
@@ -28,6 +51,23 @@ span:before {
 	padding-top: 80px;
 	font-size: 40px;
 	font-family: Titre;
+	-webkit-animation-name: bounceIn;
+  	animation-name: bounceIn;
+ 	-webkit-animation-duration:1s;
+  	animation-duration: 1s;
+  	-webkit-animation-fill-mode:both;
+  	animation-fill-mode:both;
+}
+
+body { /* couleur de fond et petite bande en plus pour la page complete*/
+	background-color: #ddd6bc;
+	font-family: Contenu, Helvetica, sans-serif;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+span:before {
+	content: " ";
 }
 
 h1, h2 {
@@ -141,7 +181,10 @@ img {
 .contact h2{
 	margin-left: 80px;
 	margin-bottom: 10px;
+}
 
+.contact h2:hover {
+	color: #6A4927;
 }
 
 .contact p {
@@ -162,6 +205,10 @@ img {
 .Hob h2 {
 	margin-left: 80px;
 	margin-bottom: 10px;
+}
+
+.Hob h2:hover {
+	color: #6A4927;
 }
 
 .Hob p {
